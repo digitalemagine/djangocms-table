@@ -19,8 +19,10 @@ class TablePlugin(CMSPluginBase):
         (None, {
             'fields': ('name',)
         }),
+        (_('Style'), {
+            'fields': (('table_id', 'table_class',),)
+        }),
         (_('Headers'), {
-
             'fields': (('headers_top', 'headers_left', 'headers_bottom'),)
         }),
         (None, {
