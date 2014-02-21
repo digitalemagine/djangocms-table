@@ -9,6 +9,9 @@ class Table(CMSPlugin):
 
     name = models.CharField(_("name"), max_length=256)
 
+    table_id = models.CharField(_("id"), default="")
+    table_class = models.CharField(_("class"), default="")
+
     headers_top = models.PositiveSmallIntegerField(_("top"), default=1)
     headers_left = models.PositiveSmallIntegerField(_("left"), default=0)
     headers_bottom = models.PositiveSmallIntegerField(_("bottom"), default=0)
