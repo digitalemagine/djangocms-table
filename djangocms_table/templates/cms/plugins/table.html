@@ -1,6 +1,6 @@
 <h2>{{ instance.name }}</h2>
 
-<table>{% for row in data %}
+<table {% if instance.table_id %}id="{{ instance.table_id }}"{% endif %} {% if instance.table_class %}class="{{ instance.table_class }}"{% endif %}>{% for row in data %}
 	<tr>{% for cell in row %}
 		{% if forloop.parentloop.counter <= instance.headers_top or forloop.counter <= instance.headers_left or forloop.parentloop.revcounter <= instance.headers_bottom %}
 			<th>{%if cell %}{{ cell }}{% endif %}</th>
