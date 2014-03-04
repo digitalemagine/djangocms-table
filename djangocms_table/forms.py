@@ -1,11 +1,13 @@
 
+import csv
+import json
+
 from django import forms
 from django.forms.models import ModelForm
 from djangocms_table.widgets import TableWidget
 from djangocms_table.models import Table
 from django.utils.translation import ugettext_lazy as _
-import csv
-from django.utils import simplejson
+
 
 
 class TableForm(ModelForm):
